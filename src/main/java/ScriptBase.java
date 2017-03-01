@@ -24,11 +24,11 @@ public class ScriptBase {
 
             for (int i = 1; i < 1001; i++) {
                 preparedStatement = con.prepareStatement(insert1000);
-                preparedStatement.setInt(1, i);
-                preparedStatement.setString(2, testName + i);
-                preparedStatement.setInt(3, (int) (Math.random() * 88));
-                preparedStatement.setBoolean(4,r.nextBoolean());
-                preparedStatement.setTimestamp(5, new Timestamp(System.currentTimeMillis()));
+                preparedStatement.setInt(1, i); // id
+                preparedStatement.setString(2, testName + i); //name
+                preparedStatement.setInt(3, (int) (Math.random() * 88)); // Age
+                preparedStatement.setBoolean(4,r.nextBoolean()); // isAdmin
+                preparedStatement.setTimestamp(5, new Timestamp(System.currentTimeMillis())); // date
                 preparedStatement.execute();
             }
 
