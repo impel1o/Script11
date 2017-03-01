@@ -45,5 +45,7 @@ public class ScriptBase {
             } catch (SQLException se) {
             }
         }
+
+        System.out.println("DONE!");
     }
 }
